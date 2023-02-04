@@ -38,3 +38,18 @@ console.log(imagen);
 pid.innerText = ""
 pid.appendChild(imagen)
 //pid.replaceWith(imagen); tambien hacer esto y olvidarte de las 2 lineas anteriores
+
+
+/// 12. Eventos en JS
+
+const input1 = document.querySelector("#calculo1")
+const input2 = document.querySelector("#calculo2")
+const btn = document.querySelector("#btnCalcular")
+const pResult = document.querySelector("#Result")
+
+function btnOnClick() {
+    const suma =+input1.value + +input2.value; //asi los suma (Unary plus+)
+    const concatenacion =input1.value + input2.value; //asi los concatena
+
+    pResult.innerHTML = "Suma: "+suma+"<br>Concatenación: "+concatenacion
+}
