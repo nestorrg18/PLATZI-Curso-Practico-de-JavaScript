@@ -53,3 +53,23 @@ function btnOnClick() {
 
     pResult.innerHTML = "Suma: "+suma+"<br>Concatenación: "+concatenacion
 }
+
+/// 13. addEventListener
+
+const inputUno = document.querySelector("#calc1")
+const inputDOS = document.querySelector("#calc2")
+const boton = document.querySelector("#btnCalc")
+const pResultado = document.querySelector("#Resultado")
+const form = document.querySelector("form")
+
+// boton.addEventListener("click", botonClick)
+form.addEventListener("submit", botonClick)
+
+function botonClick(evento) {
+    console.log(evento);
+    evento.preventDefault()
+    const suma =+inputUno.value + +inputDOS.value; //asi los suma (Unary plus+)
+    const concatenacion =inputUno.value + inputDOS.value; //asi los concatena
+
+    pResultado.innerHTML = "Suma: "+suma+"<br>Concatenación: "+concatenacion
+}
